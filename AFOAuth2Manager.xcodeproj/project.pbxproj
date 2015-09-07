@@ -11,10 +11,20 @@
 		36EF96AC1B9D9445002FE264 /* AFOAuth2Manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 36EF96A71B9D9445002FE264 /* AFOAuth2Manager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36EF96AD1B9D9445002FE264 /* AFHTTPRequestSerializer+OAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EF96A81B9D9445002FE264 /* AFHTTPRequestSerializer+OAuth2.m */; settings = {ASSET_TAGS = (); }; };
 		36EF96AE1B9D9445002FE264 /* AFOAuth2Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EF96A91B9D9445002FE264 /* AFOAuth2Manager.m */; settings = {ASSET_TAGS = (); }; };
-		36EF96AF1B9D9445002FE264 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36EF96AA1B9D9445002FE264 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		36B50EAE1B9D97C60093B9B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36B50EAA1B9D97C60093B9B1 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 36E2E58A1B9D867100FE7509;
+			remoteInfo = AFNetworking;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		36B50EAA1B9D97C60093B9B1 /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = ../AFNetworking/AFNetworking.xcodeproj; sourceTree = "<group>"; };
 		36EF969B1B9D9369002FE264 /* AFOAuth2Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFOAuth2Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EF96A61B9D9445002FE264 /* AFHTTPRequestSerializer+OAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestSerializer+OAuth2.h"; sourceTree = "<group>"; };
 		36EF96A71B9D9445002FE264 /* AFOAuth2Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAuth2Manager.h; sourceTree = "<group>"; };
@@ -34,10 +44,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36B50EA91B9D97AA0093B9B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36B50EAA1B9D97C60093B9B1 /* AFNetworking.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36B50EAB1B9D97C60093B9B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36B50EAF1B9D97C60093B9B1 /* AFNetworking.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		36EF96911B9D9369002FE264 = {
 			isa = PBXGroup;
 			children = (
 				36EF969D1B9D9369002FE264 /* AFOAuth2Manager */,
+				36B50EA91B9D97AA0093B9B1 /* Frameworks */,
 				36EF969C1B9D9369002FE264 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +146,12 @@
 			mainGroup = 36EF96911B9D9369002FE264;
 			productRefGroup = 36EF969C1B9D9369002FE264 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 36B50EAB1B9D97C60093B9B1 /* Products */;
+					ProjectRef = 36B50EAA1B9D97C60093B9B1 /* AFNetworking.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				36EF969A1B9D9369002FE264 /* AFOAuth2Manager */,
@@ -126,12 +159,21 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		36B50EAF1B9D97C60093B9B1 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = 36B50EAE1B9D97C60093B9B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		36EF96991B9D9369002FE264 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36EF96AF1B9D9445002FE264 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +287,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(TARGET_BUILD_DIR)";
 				INFOPLIST_FILE = AFOAuth2Manager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -261,6 +304,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(TARGET_BUILD_DIR)";
 				INFOPLIST_FILE = AFOAuth2Manager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
